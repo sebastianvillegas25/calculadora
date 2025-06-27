@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculadora Científica</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="contenedor">
+    <h1>🧮 Calculadora</h1>
+
+    <input type="text" id="pantalla" disabled />
+
+    <div class="botones">
+      <!-- Fila 1 -->
+      <button onclick="limpiar()">C</button>
+      <button onclick="borrar()">⌫</button>
+      <button onclick="agregar('%')">%</button>
+      <button onclick="agregar('/')">÷</button>
+
+      <!-- Fila 2 -->
+      <button onclick="agregar('7')">7</button>
+      <button onclick="agregar('8')">8</button>
+      <button onclick="agregar('9')">9</button>
+      <button onclick="agregar('*')">×</button>
+
+      <!-- Fila 3 -->
+      <button onclick="agregar('4')">4</button>
+      <button onclick="agregar('5')">5</button>
+      <button onclick="agregar('6')">6</button>
+      <button onclick="agregar('-')">−</button>
+
+      <!-- Fila 4 -->
+      <button onclick="agregar('1')">1</button>
+      <button onclick="agregar('2')">2</button>
+      <button onclick="agregar('3')">3</button>
+      <button onclick="agregar('+')">+</button>
+
+      <!-- Fila 5 -->
+      <button onclick="agregar('0')">0</button>
+      <button onclick="agregar('.')">.</button>
+      <button onclick="calcular()">=</button>
+      <button onclick="toggleModo()">🧠</button>
+    </div>
+
+    <div class="cientifica" id="cientifica">
+      <button onclick="funcion('Math.sqrt')">√</button>
+      <button onclick="funcion('Math.pow', 2)">x²</button>
+      <button onclick="funcion('Math.sin')">sin</button>
+      <button onclick="funcion('Math.cos')">cos</button>
+      <button onclick="funcion('Math.tan')">tan</button>
+      <button onclick="funcion('Math.log10')">log</button>
+      <button onclick="funcion('Math.PI')">π</button>
+      <button onclick="funcion('Math.E')">e</button>
+    </div>
+
+    <h2>Historial</h2>
+    <ul id="historial"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
